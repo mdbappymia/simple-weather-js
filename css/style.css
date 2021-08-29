@@ -19,5 +19,5 @@ body{
     font-size: 20px;
 }
 #container img{
-    color: blanchedalmond;
+    background: url(./../image/bg-image.jpg);
 }
