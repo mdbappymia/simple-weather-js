@@ -20,6 +20,7 @@ function domUpdate(data) {
     const div = document.createElement('div')
     div.innerHTML = `
     <h1>City Name:${data.name}</h1>
+    <h3>${date()}</h3>
     <h4>Condition: ${data.weather[0].main}</h4>
     <img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="" srcset="">
     <div>
@@ -32,3 +33,8 @@ function domUpdate(data) {
     document.getElementById('city-input').value = ''
 }
 
+function date() {
+    const d = new Date()
+
+    return d.toDateString()
+}
