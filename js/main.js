@@ -4,13 +4,14 @@ const iconList = `http://openweathermap.org/img/wn/10d@2x.png`
 
 const loadData = () => {
     const cityName = document.getElementById('city-input').value
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=2a7ede358d66a72b0bf262d0ae8aca04`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName || 'kushtia'}&appid=2a7ede358d66a72b0bf262d0ae8aca04`)
         .then(res => res.json())
         .then(data => {
 
             return domUpdate(data)
         })
 }
+loadData()
 
 function domUpdate(data) {
 
